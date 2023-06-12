@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <title>Animação em JavaScript</title>
+  </head>
+  <body>
+    <audio id="meuaudio" src="eu odeio _.mp3"></audio>
+    <button onclick="clique()">clique aquiiii</button>
+    <script>
+      var timerId;
+
+      function iniciarAcao() {
+        // Executar ação desejada
+        alert("Ação iniciada!");
+
+        // Definir a duração desejada em milissegundos
+        var duracao = 4500; // 5 segundos
+
+        // Agendar a execução da função após a duração especificada
+        timerId = setTimeout(finalizarAcao, duracao);
+      }
+
+      function finalizarAcao() {
+        // Limpar o temporizador e finalizar a ação
+        clearTimeout(timerId);
+        console.log("Ação finalizada!");
+      }
+
+      // Iniciar a ação
+      iniciarAcao();
+    </script>
+  </body>
+</html>
